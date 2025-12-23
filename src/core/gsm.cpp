@@ -13,7 +13,7 @@ void GameStateManager::change(std::unique_ptr<GameState> game_state) {
     queued_actions.push_back({ StateActionType::Change, std::move(game_state) });
 }
 
-void GameStateManager::apply_queued_actions() {
+void GameStateManager::applyQueuedActions() {
     for (auto& action : queued_actions) {
         switch (action.type) {
         case StateActionType::Change:

@@ -13,7 +13,7 @@ public:
 
     void draw(const sf::Drawable& drawable);
 
-    sf::Vector2u get_size();
+    sf::Vector2u getSize();
     sf::RenderWindow& window();
 
 private:

@@ -22,12 +22,12 @@ class Logger : public Singleton<Logger> {
 
 	Logger();
 
-	std::string get_timestamp(); 
-	std::string get_log_level(LogLevel level); 
+	std::string getTimestamp(); 
+	std::string getLogLevel(LogLevel level); 
 
 public:
 
-	void set_min_log_level(LogLevel level);
+	void setMinLogLevel(LogLevel level);
 
 	void logi(LogLevel lvl, const std::string& str);
 

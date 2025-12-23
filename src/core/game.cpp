@@ -7,7 +7,7 @@
 void Game::run() {
 
     GameStateManager::get().push(std::make_unique<DemoState>());
-    GameStateManager::get().apply_queued_actions();
+    GameStateManager::get().applyQueuedActions();
 
     sf::RenderWindow window = sf::RenderWindow(sf::VideoMode({ 1920u, 1080u }), "Vroom Vroom");
     window.setKeyRepeatEnabled(false);
@@ -26,6 +26,6 @@ void Game::run() {
         GameStateManager::get().render(ctx);
 
         window.display();
-        GameStateManager::get().apply_queued_actions();
+        GameStateManager::get().applyQueuedActions();
     }
 }

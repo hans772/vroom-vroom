@@ -11,7 +11,7 @@ public:
     void update(float dt) override;
     void render(RenderContext& ctx) override;
     
-    void change_color();
+    void changeColor();
 
 private:
     sf::Color color;

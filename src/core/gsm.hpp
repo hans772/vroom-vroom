@@ -24,7 +24,7 @@ public:
     void push(std::unique_ptr<GameState> state);
     void pop();
     void change(std::unique_ptr<GameState> state);
-    void apply_queued_actions();
+    void applyQueuedActions();
 
     void handleInput(sf::RenderWindow& window, float dt);
     void update(float dt);

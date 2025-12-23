@@ -20,6 +20,6 @@ sf::RenderWindow& RenderContext::window() {
     return m_window;
 }
 
-sf::Vector2u RenderContext::get_size() {
+sf::Vector2u RenderContext::getSize() {
     return m_window.getSize();
 }

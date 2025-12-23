@@ -7,7 +7,7 @@
 Logger::Logger() : m_log_level(LogLevel::DEBUG) {
 }
 
-std::string Logger::get_timestamp() {
+std::string Logger::getTimestamp() {
     auto now = std::chrono::system_clock::now();
     time_t t = std::chrono::system_clock::to_time_t(now);
 
@@ -19,7 +19,7 @@ std::string Logger::get_timestamp() {
     return formatted_time.str();
 }
 
-std::string Logger::get_log_level(LogLevel level) {
+std::string Logger::getLogLevel(LogLevel level) {
     switch (level) {
     case LogLevel::DEBUG: return "DEBUG";
     case LogLevel::INFO: return "INFO";
@@ -30,7 +30,7 @@ std::string Logger::get_log_level(LogLevel level) {
 }
 
 
-void Logger::set_min_log_level(LogLevel level) {
+void Logger::setMinLogLevel(LogLevel level) {
     m_log_level = level;
 }
 
@@ -40,8 +40,8 @@ void Logger::logi(LogLevel lvl, const std::string& str) {
     std::lock_guard<std::mutex> lock(log_mutex);
 
     std::cout << '[' <<
-        get_timestamp() << "] [" <<
-        get_log_level(lvl) << "] [" <<
+        getTimestamp() << "] [" <<
+        getLogLevel(lvl) << "] [" <<
         str << "]\n";
 
 
