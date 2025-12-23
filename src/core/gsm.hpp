@@ -14,7 +14,7 @@ enum class StateActionType { Push, Pop, Change };
 
 struct StateAction {
     StateActionType type;
-    std::unique_ptr<GameState> new_state = nullptr;
+    std::unique_ptr<GameState> newState = nullptr;
 };
 
 class GameStateManager : public Singleton<GameStateManager> {
@@ -33,7 +33,7 @@ public:
     bool empty() const;
 
 private:
-    std::vector<std::unique_ptr<GameState>> m_stack;
-    std::vector<StateAction> queued_actions;
+    std::vector<std::unique_ptr<GameState>> stateStack;
+    std::vector<StateAction> queuedActions;
 
 };

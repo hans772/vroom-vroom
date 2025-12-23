@@ -37,10 +37,10 @@ void EventHandler::runScheduledEvents(float dt) {
 	std::vector<int> removes;
 	for (int i = 0; i < scheduled_events.size(); i++) {
 		ScheduledEvent* event = &scheduled_events[i];
-		if (event->next_execute < elapsed_time) {
+		if (event->nextExecute < elapsed_time) {
 			event->callback();
 			if (event->repeats || event->indefinite) {
-				event->next_execute = elapsed_time + event->seconds_interval;
+				event->nextExecute = elapsed_time + event->seconds_interval;
 				event->repeats--;
 			}
 			else {

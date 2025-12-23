@@ -4,7 +4,7 @@
 #include <chrono>
 #include <iomanip>
 
-Logger::Logger() : m_log_level(LogLevel::DEBUG) {
+Logger::Logger() : minLogLevel(LogLevel::DEBUG) {
 }
 
 std::string Logger::getTimestamp() {
@@ -31,13 +31,13 @@ std::string Logger::getLogLevel(LogLevel level) {
 
 
 void Logger::setMinLogLevel(LogLevel level) {
-    m_log_level = level;
+    minLogLevel = level;
 }
 
 void Logger::logi(LogLevel lvl, const std::string& str) {
-    if ((lvl < m_log_level)) return;
+    if ((lvl < minLogLevel)) return;
 
-    std::lock_guard<std::mutex> lock(log_mutex);
+    std::lock_guard<std::mutex> lock(logMutex);
 
     std::cout << '[' <<
         getTimestamp() << "] [" <<

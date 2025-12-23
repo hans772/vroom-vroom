@@ -17,7 +17,7 @@ struct ScheduledEvent {
 	SchedCallback callback;
 	int repeats;
 	bool indefinite;
-	float next_execute;
+	float nextExecute;
 	float seconds_interval;
 };
 

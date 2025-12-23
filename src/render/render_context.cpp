@@ -1,25 +1,25 @@
 #include "render/render_context.hpp"
 
 RenderContext::RenderContext(sf::RenderWindow& window)
-    : m_window(window) {
+    : window(window) {
 }
 
 void RenderContext::clear() {
-    m_window.clear();
+    window.clear();
 }
 
 void RenderContext::display() {
-    m_window.display();
+    window.display();
 }
 
 void RenderContext::draw(const sf::Drawable& drawable) {
-    m_window.draw(drawable);
+    window.draw(drawable);
 }
 
 sf::RenderWindow& RenderContext::window() {
-    return m_window;
+    return window;
 }
 
 sf::Vector2u RenderContext::getSize() {
-    return m_window.getSize();
+    return window.getSize();
 }

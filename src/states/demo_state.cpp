@@ -3,7 +3,7 @@
 
 DemoState::DemoState() {
 
-    ev_h.registerKeyEvent(sf::Keyboard::Scancode::B, std::bind(&DemoState::changeColor, this), false);
+    evHandler.registerKeyEvent(sf::Keyboard::Scancode::B, std::bind(&DemoState::changeColor, this), false);
     color = sf::Color::White;
 }
 

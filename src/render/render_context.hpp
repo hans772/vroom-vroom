@@ -17,5 +17,5 @@ public:
     sf::RenderWindow& window();
 
 private:
-    sf::RenderWindow& m_window;
+    sf::RenderWindow& window;
 };

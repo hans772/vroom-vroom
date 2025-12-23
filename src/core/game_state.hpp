@@ -6,7 +6,7 @@
 class GameState {
 public:
 
-    EventHandler ev_h;
+    EventHandler evHandler;
     
     virtual ~GameState() = default;
     virtual void onEnter() {}

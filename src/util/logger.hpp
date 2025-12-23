@@ -16,9 +16,9 @@ enum class LogLevel { // in order
 class Logger : public Singleton<Logger> {
 	friend class Singleton<Logger>;
 
-	std::mutex log_mutex;
+	std::mutex logMutex;
 
-	LogLevel m_log_level;
+	LogLevel minLogLevel;
 
 	Logger();
 
